@@ -7,12 +7,12 @@ public class Main {
         Scanner keyboard = new Scanner(System.in);
         boolean run = true;
         String userInput = "";
-        String[] quotes = {"An apple a day keeps the doctor away if you throw it hard enough",
-                "Mind Bottling", "Rocket Surgery", "This Ain't my first Pony Ride",
-                "We'll burn that bridge when we get to it",
-                "There's enough tools in this place to build a barn",
-                "Bingle Barrel baby", "It looks could kill", "Survival of the Fitness",
-                "Is that you John Wayne? Is this me?"};
+        String[] quotes = {"\"An apple a day keeps the doctor away if you throw it hard enough\"",
+                "\"Mind Bottling", "\"Rocket Surgery\"", "\"This Ain't my first Pony Ride\"",
+                "\"We'll burn that bridge when we get to it\"",
+                "\"There's enough tools in this place to build a barn\"",
+                "\"Bingle Barrel Baby\"", "\"It looks could kill\"", "\"Survival of the Fitness\"",
+                "\"Is that you John Wayne? Is this me?\""};
 
         while (run) {
             try {
@@ -31,6 +31,9 @@ public class Main {
                         int randomNum = (int)(Math.random() * (10) + 1);
                         System.out.print("\n" + quotes[randomNum - 1]);
                         break;
+                    default:
+                        System.out.print("\nPlease enter a valid response.");
+                        break;
                 }
             }
             catch (Exception e) {
@@ -46,11 +49,11 @@ public class Main {
                     break;
 
                 case("n"):
-                    System.out.println("\nClosing program...");
+                    System.out.print("\nClosing program...");
                     run = false;
                     break;
                 default:
-                    System.out.println("\nPlease enter a valid response.");
+                    System.out.println("Please enter a valid response.\n");
             } // end of switch case
         } // end of while loop
     } // end of main()
