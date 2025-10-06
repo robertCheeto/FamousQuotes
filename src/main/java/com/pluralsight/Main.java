@@ -17,12 +17,28 @@ public class Main {
             try {
                 System.out.print("Choose a number between 1-10 for a quote: ");
                 int index = keyboard.nextInt();
+                keyboard.nextLine();
 
                 System.out.print(quotes[index - 1]);
-                run = false;
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
+            }
+            System.out.print("\n\nWould you like to see another quote? (Y/N): ");
+            String userInput = keyboard.nextLine().toLowerCase().trim();
+            switch (userInput) {
+                case("y"):
+                    System.out.print("Choose a number between 1-10 for a quote: ");
+                    int index = keyboard.nextInt();
+                    keyboard.nextLine();
+                    System.out.print(quotes[index - 1]);
+
+                case("n"):
+                    System.out.println("Closing program...");
+                    run = false;
+                    break;
+                default:
+                    System.out.println("Please enter a valid response.");
             }
 
         }
