@@ -23,9 +23,11 @@ public class Main {
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
-            }
+            } // end of try-catch
+
             System.out.print("\n\nWould you like to see another quote? (Y/N): ");
             String userInput = keyboard.nextLine().toLowerCase().trim();
+
             switch (userInput) {
                 case("y"):
                     System.out.print("Choose a number between 1-10 for a quote: ");
@@ -39,10 +41,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Please enter a valid response.");
-            }
-
-        }
-
-
-    }
+            } // end of switch case
+        } // end of while loop
+    } // end of main()
 }
