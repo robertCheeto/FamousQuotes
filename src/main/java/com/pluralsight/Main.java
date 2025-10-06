@@ -18,29 +18,25 @@ public class Main {
                 System.out.print("Choose a number between 1-10 for a quote: ");
                 int index = keyboard.nextInt();
                 keyboard.nextLine();
-
                 System.out.print(quotes[index - 1]);
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
             } // end of try-catch
 
-            System.out.print("\n\nWould you like to see another quote? (Y/N): ");
+            System.out.print("\nWould you like to see another quote? (Y/N): ");
             String userInput = keyboard.nextLine().toLowerCase().trim();
 
             switch (userInput) {
                 case("y"):
-                    System.out.print("Choose a number between 1-10 for a quote: ");
-                    int index = keyboard.nextInt();
-                    keyboard.nextLine();
-                    System.out.print(quotes[index - 1]);
+                    break;
 
                 case("n"):
-                    System.out.println("Closing program...");
+                    System.out.println("\nClosing program...");
                     run = false;
                     break;
                 default:
-                    System.out.println("Please enter a valid response.");
+                    System.out.println("\nPlease enter a valid response.");
             } // end of switch case
         } // end of while loop
     } // end of main()
