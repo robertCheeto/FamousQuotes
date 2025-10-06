@@ -49,7 +49,7 @@ public class Main {
                     break;
 
                 case("n"):
-                    System.out.print("\nClosing program...");
+                    System.out.print("Closing program...");
                     run = false;
                     break;
                 default:
